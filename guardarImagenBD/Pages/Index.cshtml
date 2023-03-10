@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">GUARDAR FOTO</h1>
+    <br />
+
+    <!-- Formulario para guardar imagenes -->
+    <form method="post" enctype="multipart/form-data">
+        <fieldset>
+            <label asp-for="Imagen.Datos_Imagen"></label>
+            <input asp-for="Imagen.Datos_Imagen" type="file" name="Imagen.Datos_Imagen" accept="image/png" />
+        </fieldset>
+
+        <br />
+        <button type="submit" value="Guardar Imagen" asp-page-handler="Submit">Guardar Imagen</button>
+    </form>
+
+    <br />
+
+    @if (Model.Mensaje != null)
+    {
+        <h2>@Model.Mensaje</h2>
+    }
+</div>
