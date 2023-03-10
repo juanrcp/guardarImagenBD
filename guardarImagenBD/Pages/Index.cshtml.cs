@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace guardarImagenBD.Pages
 {
+    //Clase para convertir las imagenes jpg en byte[] y guardarlas en la BD
     public class IndexModel : PageModel
     {
-
         //Contexto
         private EntityDAL.bD_ImagenDataContext _contexto;
 

@@ -1,0 +1,14 @@
+﻿@page
+@model guardarImagenBD.Pages.VistaImagenesModel
+@{
+}
+
+<h1>LISTA DE IMAGENES</h1>
+<br />
+<br />
+@foreach (var item in @Model.ListaImagenes){
+
+    <!--Con esto mostramos las imagenes desde la columna con byte[]-->
+    <img src="data:image/png;base64,@item.Cod_Imagen"/>
+
+}
